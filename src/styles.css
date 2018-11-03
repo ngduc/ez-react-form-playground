@@ -1,0 +1,14 @@
+body {
+  margin: 10px !important;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+.title {
+  text-align: right;
+}
+.title a {
+  color: blue !important;
+}
