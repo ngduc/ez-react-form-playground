@@ -1,20 +1,25 @@
 import * as React from "react";
+import * as Yup from "yup";
 import { DisplayFormState } from "../Utils";
 
 import { FormContainer, Form, Field, Button } from "ez-react-form";
+
+const schema = Yup.object().shape({
+  username: Yup.string().required("Username is required!")
+});
 
 export default class extends React.Component {
   renderForm = (props: any) => {
     return (
       <Form use="bootstrap4">
-        <div className="form-row">
-          <Field name="username" className="col-md-6" />
-          <Field name="email" className="col-md-6" />
-        </div>
-        <div className="form-row">
-          <Field password name="password" className="col-md-6" />
-          <Field password name="confirm" className="col-md-6" />
-        </div>
+        <Field row>
+          <Field name="username" />
+          <Field name="email" />
+        </Field>
+        <Field row>
+          <Field password name="password" />
+          <Field password name="confirm" />
+        </Field>
 
         <Button type="submit" />
         <DisplayFormState {...props} />
@@ -28,6 +33,7 @@ export default class extends React.Component {
         <strong>Form Layouts:</strong>
         <FormContainer
           initialValues={{ email: "example@email.com", roles: [], gender: "" }}
+          validationSchema={schema}
           onSubmit={() => {}}
           render={this.renderForm}
         />
