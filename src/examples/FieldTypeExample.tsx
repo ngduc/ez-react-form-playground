@@ -26,6 +26,7 @@ export default class extends React.Component {
         <Field select options={animals} name="select" />
         <Field radios options={genders} name="radio" />
         <Field checkboxes options={roles} name="checkboxes" />
+        <Field tagSelect name="tags" options={animals.slice(1)} />
         <Field number name="number" />
         <Field date name="date" />
         <Field time name="time" />
