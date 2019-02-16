@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Yup from "yup";
 import { animals, genders, roles, DisplayFormState } from "../Utils";
 
-import { FormContainer, Form, Field, Button } from "ez-react-form";
+import { FormContainer, Form, Field, Button } from "ui-form-field";
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -30,6 +30,7 @@ export default class extends React.Component {
       <Field radios options={genders} name="gender" />
       <Field select options={animals} name="animal" />
       <Field checkboxes options={roles} name="roles" />
+      <Field checkbox name="singleCheckbox" />
 
       <Button type="submit" disabled={props.isSubmitting} />
       <Button gap={10} disabled>

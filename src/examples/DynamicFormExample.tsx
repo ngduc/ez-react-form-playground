@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Yup from "yup";
 import { DisplayFormState, deleteProperties } from "../Utils";
 
-import { FormContainer, Form, Field, Button } from "ez-react-form";
+import { FormContainer, Form, Field, Button } from "ui-form-field";
 
 export const genders = [
   { value: "", label: "N/A" },

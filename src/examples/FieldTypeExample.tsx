@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { DisplayFormState } from "../Utils";
 import { log, animals, roles, genders } from "../Utils";
 
-import { FormContainer, Form, Field, Button } from "ez-react-form";
+import { FormContainer, Form, Field, Button } from "ui-form-field";
 
 const schema = Yup.object().shape({});
 

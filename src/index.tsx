@@ -2,11 +2,11 @@ import * as React from "react";
 import { render } from "react-dom";
 import "./styles.css";
 
-// import "ez-react-form/lib/css/spectre.css";
-// import "ez-react-form/lib/css/bootstrap3.css";
-import "ez-react-form/lib/css/bootstrap4.css";
-// import "ez-react-form/lib/css/semanticui2.css";
-import "ez-react-form/lib/css/styles.css"; // default Theme
+// import "ui-form-field/lib/css/spectre.css";
+// import "ui-form-field/lib/css/bootstrap3.css";
+import "ui-form-field/lib/css/bootstrap4.css";
+// import "ui-form-field/lib/css/semanticui2.css";
+import "ui-form-field/lib/css/styles.css"; // default Theme
 
 import BasicExample from "./examples/BasicExample";
 import DynamicFormExample from "./examples/DynamicFormExample";
@@ -43,8 +43,8 @@ class App extends React.Component<{}, IState> {
       <div>
         <div className="title">
           Examples of: &nbsp;
-          <a href="https://github.com/ngduc/ez-react-form" target="_blank">
-            ez-react-form
+          <a href="https://github.com/ngduc/ui-form-field" target="_blank">
+            ui-form-field
           </a>
         </div>
         <nav>
