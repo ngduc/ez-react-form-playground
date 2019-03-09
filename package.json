@@ -9,7 +9,7 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-scripts-ts": "^2.13.0",
-    "ui-form-field": "1.0.1",
+    "ui-form-field": "1.1.2",
     "yup": "0.26.6"
   },
   "scripts": {

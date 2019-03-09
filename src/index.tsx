@@ -32,6 +32,11 @@ class App extends React.Component<{}, IState> {
     view: "BasicExample"
   };
 
+  componentWillMount() {
+    const view = localStorage.getItem("view") || "BasicExample";
+    this.setState({ view });
+  }
+
   show = (ev: any) => {
     this.setState({ view: ev.target.dataset.name });
     console.log(ev.target.dataset.name);
@@ -47,22 +52,24 @@ class App extends React.Component<{}, IState> {
             ui-form-field
           </a>
         </div>
-        <nav>
-          <a href="#" data-name="BasicExample" onClick={this.show}>
-            #Basic
-          </a>
-          <a href="#" data-name="FieldTypeExample" onClick={this.show}>
-            #FieldTypes
-          </a>
-          <a href="#" data-name="DynamicFormExample" onClick={this.show}>
-            #DynamicForm
-          </a>
-          <a href="#" data-name="EventHandlerExample" onClick={this.show}>
-            #EventHandler
-          </a>
-          <a href="#" data-name="LayoutExample" onClick={this.show}>
-            #Layout
-          </a>
+        <nav style={{ marginBottom: 10 }}>
+          {Object.keys(Views).map(v => {
+            const style = {
+              color: v === this.state.view ? "teal" : "blue",
+              marginRight: 20
+            };
+            return (
+              <a
+                key={v}
+                href="javascript:;"
+                data-name={v}
+                onClick={this.show}
+                style={style}
+              >
+                {v}
+              </a>
+            );
+          })}
         </nav>
         <hr />
 
