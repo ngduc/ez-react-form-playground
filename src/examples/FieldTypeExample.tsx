@@ -4,7 +4,7 @@ import { DisplayFormState } from "../Utils";
 import { log, animals, roles, genders } from "../Utils";
 
 import { FormContainer, Form, Field, Button } from "ui-form-field";
-import { SingleSelect, MultiSelect } from "ui-form-field/lib/custom";
+import { SingleSelect, MultiSelect, TagSelect } from "ui-form-field/lib/custom";
 
 const schema = Yup.object().shape({});
 
@@ -37,7 +37,7 @@ export default class extends React.Component {
           options={animals.slice(1)}
           name="multiSelect"
         />
-        <Field tagSelect name="tags" options={animals.slice(1)} />
+        <Field custom={TagSelect} name="tags" options={animals.slice(1)} />
         <Field number name="number" />
         <Field date name="date" />
         <Field time name="time" />
